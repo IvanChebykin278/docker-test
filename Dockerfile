@@ -1,4 +1,6 @@
 # This is a sample Dockerfile you can modify to deploy your own app based on face_recognition
+# python3-dev \
+# python3-numpy \
 
 FROM python:3.6-slim-stretch
 
@@ -7,8 +9,6 @@ RUN apt-get install -y --fix-missing \
     build-essential \
     cmake \
     git \
-    python3-dev \
-    python3-numpy \
     software-properties-common \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
